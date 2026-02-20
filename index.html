@@ -2,17 +2,24 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
-        <script src="logic.js"></script>
-    <title>Document</title>
+    <script src="logic.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>Yatzy</title>
 </head>
 <body>
+
     <div class="screen">
         <div class="grid">
-            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
-            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            <img src="dice1.jpg" class="die" id="die0">
+            <img src="dice1.jpg" class="die" id="die1">
+            <img src="dice1.jpg" class="die" id="die2">
+            <img src="dice1.jpg" class="die" id="die3">
+            <img src="dice1.jpg" class="die" id="die4">
         </div>
     </div>
 
-    
+    <button id="rollBtn">Kast</button>
+    <p>Kast tilbage: <span id="throwsLeft">3</span></p>
+
 </body>
 </html>
