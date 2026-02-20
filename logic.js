@@ -1,16 +1,35 @@
 const game = new Logic();
-let holds = [false, false, false, false, false];
-const maxThrows = 3;
+
+let yatziModel = [
+    {value: 0, hold: false, rollDice: clickDice()},
+    {value: 0, hold: false, rollDice: clickDice()},
+    {value: 0, hold: false, rollDice: clickDice()},
+    {value: 0, hold: false, rollDice: clickDice()},
+    {value: 0, hold: false, rollDice: clickDice()}
+
+]
+
+let throwCount = 0;
+
+function throwDice() {
+    for (const die of yatziModel) {
+        if(die.hold === false) {
+            die[value] = Math.floor(Math.random() * 6) + 1;
+        }
+        throwCount++
+    }
+}
 
 const rollBtn = document.getElementById("rollBtn");
 const throwsLeftText = document.getElementById("throwsLeft");
 
 // Kast-knap
 rollBtn.addEventListener("click", function () {
+    const maxThrows = 3;
 
     if (game.getThrowCount() >= maxThrows) return;
 
-    game.throwDice(holds);
+    game.throwDice();
     updateDice();
 
     let throwsLeft = maxThrows - game.getThrowCount();
