@@ -2,24 +2,114 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
-    <script src="logic.js" defer></script>
-    <script src="script.css" defer></script>
-    <title>Yatzy</title>
+    <meta charset="UTF-8">
+    <title>Yatzy Game</title>
 </head>
 <body>
+    <div class="wrapper">
 
-    <div class="dices">
-        <div class="grid">
-            <img src="dice1.jpg" class="die" id="die0">
-            <img src="dice1.jpg" class="die" id="die1">
-            <img src="dice1.jpg" class="die" id="die2">
-            <img src="dice1.jpg" class="die" id="die3">
-            <img src="dice1.jpg" class="die" id="die4">
+    <!-- Top panel -->
+    <div class="panel top-panel">
+      <div class="dice-row">
+        <div class="dice" id="1">
+            <img src="dice1.png" alt="">
         </div>
+        <div class="dice" id="2">
+            <img src="dice1.png" alt="">
+        </div>
+        <div class="dice" id="3">
+            <img src="dice1.png" alt="">
+        </div>
+        <div class="dice" id="4">
+            <img src="dice1.png" alt="">
+        </div>
+        <div class="dice" id="5">
+            <img src="dice1.png" alt="">
+        </div>
+      </div>
+
+      <div class="turn-row">
+        <div class="turn">Turn 1</div>
+        <button class="btn" type="button">Roll!</button>
+      </div>
     </div>
 
-    <button id="rollBtn">Kast</button>
-    <p>Kast tilbage: <span id="throwCount">""</span></p>
+    <!-- Score panel -->
+    <div class="panel score-panel">
+      <div class="score-grid">
 
+        <div class="label">1-s</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">2-s</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">3-s</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">4-s</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">5-s</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">6-s</div>
+            <input class="score" value="0" />
+        
+        <div class="inline-metrics">
+          <span>Sum:</span><input class="score mini" />
+          <span>Bonus:</span><input class="score mini" />
+        </div>
+
+        <div class="label">One pair</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">Two pairs</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">Three same</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">Four same</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">Full house</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">Small straight</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">Large straight</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">Chance</div>
+            <input class="score" value="0" />
+        <div></div>
+
+        <div class="label">Yatzy</div>
+            <input class="score" value="0" />
+
+        <!-- Total at bottom right (3rd column, last row) -->
+        <div class="total-wrapper">
+            <label for="totalScore">Total:</label>
+            <input id="totalScore" class="score total" value="0" readonly />
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
