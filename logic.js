@@ -12,7 +12,7 @@ class logic {
         return this.values;
     }
 
-    // Kun til test
+    // Kun til test 
     setValues(values) {
         this.values = values;
     }
